@@ -1,0 +1,9 @@
+<section class="article-list">
+  <app-article-card *ngFor="let item of data.list"
+                    class="item"
+                    [ngClass]="{full: item.showFull}"
+                    [data]="item"
+                    (buttonClicked)="onButtonClicked(item)">
+
+  </app-article-card>
+</section>

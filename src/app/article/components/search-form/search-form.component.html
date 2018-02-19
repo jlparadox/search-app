@@ -1,0 +1,11 @@
+<mat-card class="search-form">
+  <form [formGroup]="searchForm">
+    <mat-form-field class="search-input">
+      <input type="text"
+             matInput
+             placeholder="Search here"
+             formControlName="search"/>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</mat-card>

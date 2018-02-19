@@ -1,0 +1,31 @@
+.article-list {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+
+  .item {
+    max-width: 100%;
+    flex-basis: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1rem;
+
+    &.full {
+      flex-basis: 100% !important;
+    }
+
+    @media screen {
+      @media (max-width: 1280px) {
+        flex-basis: 49%;
+
+        &.full {
+          flex-basis: 100% !important;
+        }
+      }
+    }
+  }
+}

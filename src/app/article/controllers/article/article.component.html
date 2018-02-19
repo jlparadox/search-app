@@ -1,0 +1,17 @@
+<section class="article">
+  <app-article-search-form (searchChanges)="onSearchChanges($event)">
+  </app-article-search-form>
+
+  <section
+           class="search-result">
+
+    <div *ngIf="searchTouched">
+      <p class="result-header" *ngIf="articleList.list.length !== 0">Found {{ articleList.list.length }} articles: </p>
+      <p class="result-header" *ngIf="articleList.list.length === 0">No articles found</p>
+    </div>
+
+    <app-article-list [data]="articleList">
+
+    </app-article-list>
+  </section>
+</section>
